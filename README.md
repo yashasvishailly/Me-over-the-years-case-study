@@ -2,9 +2,12 @@
 
 A private Android memory album for an audience of one: a quick place to save the little moments that are too small for a diary and too personal, ordinary, or precious to publish.
 
-![Me, over the years screens with synthetic memories](./assets/me-over-the-years-screens.jpg)
+<p align="center">
+  <img src="./assets/me-over-the-years-v03-home.jpg" width="42%" alt="Me, over the years v0.3 home screen with synthetic memory text">
+  <img src="./assets/me-over-the-years-v03-editor.jpg" width="42%" alt="Me, over the years v0.3 edit-memory dialog with synthetic memory text">
+</p>
 
-*Public product presentation using synthetic memories. See [the visual product notes](./VISUAL_PRODUCT.md).*
+*Sanitized v0.3 device captures using synthetic memory text. The current product is text-only: it cannot attach images, video, or audio. See [the visual product notes](./VISUAL_PRODUCT.md).*
 
 ## The product belief
 
