@@ -1,8 +1,15 @@
 # Me, over the years, visual product
 
-> This public presentation uses synthetic memories. It reveals the product's visual reasoning without publishing private diary content, device captures containing real memories, or application source.
+> These are sanitized versions of actual v0.3 device captures. Only the test-memory text was replaced with synthetic copy. They reveal the product's visual reasoning without publishing private diary content or application source.
 
-![Me, over the years screens with synthetic memories](./assets/me-over-the-years-screens.jpg)
+<p align="center">
+  <img src="./assets/me-over-the-years-v03-home.jpg" width="42%" alt="Actual Me, over the years v0.3 home screen, sanitized with synthetic text">
+  <img src="./assets/me-over-the-years-v03-editor.jpg" width="42%" alt="Actual Me, over the years v0.3 editor screen, sanitized with synthetic text">
+</p>
+
+## Current media boundary
+
+The product documented here stores short text memories. It does not currently support image, video, or audio attachments. Those formats remain future ideas rather than shipped capabilities.
 
 ## The visual idea
 
@@ -53,6 +60,6 @@ The home screen became a tactile page stack. Calendar returned as a month grid w
 
 ## The screenshot boundary
 
-The board above is a polished public reconstruction using fictional text. It demonstrates the product language and implemented text-memory interaction without reproducing a private device screen.
+The screens above preserve the real v0.3 product layout and visual system. The visible memory copy is synthetic, and the original private source screenshots remain in the private product-history repository.
 
-Photos remain future product work and are intentionally absent. Real memories, private screenshots, backup files, signing material, detailed UI assets, and application code remain private.
+Images, video, and audio remain future product work and are intentionally absent. Real memories, unsanitized private screenshots, backup files, signing material, detailed UI assets, and application code remain private.
