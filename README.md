@@ -2,6 +2,10 @@
 
 A private Android memory album for an audience of one: a quick place to save the little moments that are too small for a diary and too personal, ordinary, or precious to publish.
 
+![Me, over the years screens with synthetic memories](./assets/me-over-the-years-screens.jpg)
+
+*Public product presentation using synthetic memories. See [the visual product notes](./VISUAL_PRODUCT.md).*
+
 ## The product belief
 
 A memory does not need an audience to be worth keeping.
@@ -47,7 +51,7 @@ The next priorities are editable or backdated memory dates, encrypted versioned 
 
 ## What this repository is
 
-A public case study and system architecture. See `ARCHITECTURE.md`.
+A public case study, visual product history, and system architecture. See `VISUAL_PRODUCT.md` and `ARCHITECTURE.md`.
 
 The Android source, private product diary, device screenshots containing personal memories, backup files, signing material, and all memory data stay private. No application code is published here.
 
