@@ -9,7 +9,7 @@
 
 ## Current media boundary
 
-The product documented here stores short text memories. It does not currently support image, video, or audio attachments. Those formats remain future ideas rather than shipped capabilities.
+The product documented here stores short text memories. It does not currently support image, video, or audio attachments. Photos and short video are planned as separate future releases rather than presented as shipped capabilities.
 
 ## The visual idea
 
@@ -39,6 +39,14 @@ Manual export and non-destructive restore, duplicate protection, stable signed u
 
 The home screen became a tactile page stack. Calendar returned as a month grid with marked days. Years became “This day, over the years,” with a clear selector and an honest empty state for years without a memory.
 
+### Planned media release — Photos
+
+Photos come first. The app will use Android's user-controlled Photo Picker, copy only selected images into app storage, create an optimized local version, show storage usage, and include media in tested export and restore. It will not request broad photo-library access.
+
+### Later media release — Short video
+
+Video will ship separately after photo storage and media backup are trustworthy. The version will need explicit clip selection, duration and storage limits, local playback, generated thumbnails, deletion that cleans up the local copy, and a tested restore path. Video will not be silently uploaded or synced.
+
 ## Visual language
 
 - Warm paper and ink navy as the base
@@ -62,4 +70,4 @@ The home screen became a tactile page stack. Calendar returned as a month grid w
 
 The screens above preserve the real v0.3 product layout and visual system. The visible memory copy is synthetic, and the original private source screenshots remain in the private product-history repository.
 
-Images, video, and audio remain future product work and are intentionally absent. Real memories, unsanitized private screenshots, backup files, signing material, detailed UI assets, and application code remain private.
+Photos and short video remain versioned future work and are intentionally absent from the current screenshots. Audio remains later. Real memories, unsanitized private screenshots, backup files, signing material, detailed UI assets, and application code remain private.
