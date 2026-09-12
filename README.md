@@ -50,7 +50,7 @@ The second lesson was visual: the album metaphor works only when it shapes inter
 
 ## Current direction
 
-The next priorities are editable or backdated memory dates, encrypted versioned backup, refined resurfacing rules, and eventually carefully selected photos. Automatic public sharing, social mechanics, and a cloud backend are deliberately out of scope.
+The next priorities are editable or backdated memory dates, encrypted versioned backup, and refined resurfacing rules. After that safety foundation, media is planned in separate releases: user-selected photos first, then short video in a later version. Automatic public sharing, social mechanics, and a cloud backend are deliberately out of scope.
 
 ## What this repository is
 
