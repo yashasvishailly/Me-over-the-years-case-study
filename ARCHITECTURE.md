@@ -2,13 +2,13 @@
 
 ## Overview
 
-A single-device Android application built in Kotlin and Jetpack Compose. The interface reads and writes text memories through a view model to a local SQLite database. The core app has no account, server, analytics, or internet dependency.
+A single-device Android application built in Kotlin and Jetpack Compose. The interface reads and writes text memories through a view model to a local SQLite database. Memory capture and browsing require no account or server. The reviewed v0.4.2 test build also has a separate usage/crash-reporting network flow after notice acceptance.
 
 ## Components
 
 - **Compose interface.** Today, calendar, years, memory-page browsing, and the editor are native Android UI surfaces.
-- **State layer.** A lifecycle-aware view model loads entries off the main thread and coordinates saves, edits, deletes, search, export, and restore.
-- **Local database.** SQLite stores the memory text plus creation and update timestamps on the device.
+- **State layer.** A lifecycle-aware view model loads entries off the main thread and coordinates saves, edits, deletes, export, and restore. Text search exists in storage and the view model but is not exposed by the current screens.
+- **Local database.** SQLCipher-encrypted SQLite stores memory text plus creation and update timestamps on the device. Android Keystore protects its key.
 - **Backup boundary.** User-selected Android file destinations support manual JSON export and restore. Restore is additive, protects existing entries, and suppresses duplicates.
 - **Build and signing.** Permanently signed release builds can install over the existing app so the Android application identity and local data survive updates.
 
@@ -37,11 +37,11 @@ A single-device Android application built in Kotlin and Jetpack Compose. The int
 
 ## Privacy and safety boundary
 
-- The core app has no internet permission and does not transmit memory text.
-- There is no profile, login, analytics SDK, app-owned backend, or cloud database.
+- The current test build declares internet permission for usage and crash reports; memory text is excluded. Capture and browsing still work offline.
+- There is no account or app-owned memory backend. After the first-launch notice is accepted, test reporting stays enabled in that version and includes usage events, failures, and approximate network-derived location. A tester name is optional.
 - Android backup is disabled for the application.
 - Updates must retain the same signing identity; losing the signing key would prevent an in-place update.
-- The current portable export is plaintext and should remain in a trusted location.
+- The current portable JSON export is plaintext and should remain in a trusted location. Export and restore are limited to 8 MiB.
 - Encrypted, user-controlled backup is required before automatic off-device continuity.
 
 ## Design choices
