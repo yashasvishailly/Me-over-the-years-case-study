@@ -44,9 +44,9 @@ Capture and browsing work offline. Memories live in a SQLCipher-encrypted SQLite
 database whose key is protected by Android Keystore. The v0.3 images above remain
 historical, sanitized examples.
 
-The test build requests internet permission for usage and crash reports. Nothing
-is sent until the first-launch notice is accepted; reporting then stays enabled
-in that version. Events cover usage and failures, and the provider derives an
+The test build requests internet permission for usage and crash reports. Reports are sent only when a nonempty reporting key is configured and the
+first-launch notice has been accepted. The reviewed v0.4.2 source has no in-app
+off switch after acceptance; this does not mean an unconfigured build sends reports. Events cover usage and failures, and the provider derives an
 approximate location from the network address. Memory text is excluded. A tester
 can optionally add their name to reports. Local memory storage does not mean the
 test build makes no network requests.
