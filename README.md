@@ -20,7 +20,7 @@ Most diary products begin with writing and storage. Me, over the years begins wi
 - Fast text-memory capture with an automatic date and time
 - Today, calendar, and year-based ways to revisit entries
 - A “this day, over the years” view for memories on the same calendar date
-- An offline local SQLite store with no account or app-owned backend
+- An offline local SQLite store encrypted with SQLCipher, with no account or app-owned memory backend
 - Manual export and non-destructive restore, including duplicate protection
 - Permanently signed Android builds so updates can install without deleting local memories
 - A warm, Japanese-stationery-inspired album interface built with Jetpack Compose
@@ -31,16 +31,30 @@ The product has moved through several real-device iterations: from a plain offli
 
 - One person, not a social network
 - Android and offline-first
-- No profile, login, analytics, ads, paid API, or app-owned cloud database
+- No account, login, ads, paid AI API, or app-owned memory database
+- Test-build usage and crash reporting is disclosed separately from memory storage
 - Core memories remain on the device
 - Sharing, if added, must be deliberate
 - The interface should feel tactile and personal without competing with the user's words
 
 ## The privacy model
 
-The Android app requests no internet permission for its core experience. Entries live in an on-device SQLite database. A manual JSON export exists for continuity, but it is readable plaintext and must be kept in a trusted location until encrypted backup is implemented.
+The private source reviewed on 22 October 2026 identifies version **0.4.2**.
+Capture and browsing work offline. Memories live in a SQLCipher-encrypted SQLite
+database whose key is protected by Android Keystore. The v0.3 images above remain
+historical, sanitized examples.
 
-The long-term direction is user-controlled, on-device encryption before a backup leaves the phone, with provider-agnostic destinations and no Me, over the years account.
+The test build requests internet permission for usage and crash reports. Reports are sent only when a nonempty reporting key is configured and the
+first-launch notice has been accepted. The reviewed v0.4.2 source has no in-app
+off switch after acceptance; this does not mean an unconfigured build sends reports. Events cover usage and failures, and the provider derives an
+approximate location from the network address. Memory text is excluded. A tester
+can optionally add their name to reports. Local memory storage does not mean the
+test build makes no network requests.
+
+Manual JSON backups remain readable plaintext and must be kept private. Export
+and restore have an 8 MiB limit. Android automatic backup and phone transfer are
+disabled. Uninstalling or losing the phone removes memories that are not in an
+exported backup. Encrypted portable backup remains planned work.
 
 ## What I learned
 
